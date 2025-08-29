@@ -1,0 +1,187 @@
+/* Container around the entire Add Media section */
+.add-media-container {
+  padding: 20px;
+}
+
+/* The search form */
+.add-media-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Uiverse.io style input container */
+.form__group.field {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #116399, #38caef);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38caef;
+  font-weight: 700;
+}
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+/* The fancy "boton-elegante" style */
+.boton-elegante {
+  padding: 10px 20px;
+  border: 2px solid #2c2c2c;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+}
+.boton-elegante::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.boton-elegante:hover::after {
+  transform: scale(4);
+}
+.boton-elegante:hover {
+  border-color: #666666;
+  background: #292929;
+}
+
+/* The modal overlay */
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* The modal content box */
+.search-modal-content {
+  background: #222;
+  border-radius: 8px;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto; /* scroll if too many results */
+}
+
+.search-modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Each result item in the modal */
+.search-result-card {
+  border: 1px solid #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Poster at 150px height, on the left */
+.result-poster {
+  height: 150px;
+  width: auto;
+  border-radius: 4px;
+}
+
+/* Info area on the right */
+.result-info {
+  flex: 1; /* so it takes the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* space between title/overview and button */
+}
+
+/* Title and overview */
+.result-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: #fff;
+}
+.result-overview {
+  margin: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* "Add This" button in the card */
+.search-result-card button {
+  background: #444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 10px;
+}
+.search-result-card button:hover {
+  background: #555;
+}
