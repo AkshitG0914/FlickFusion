@@ -1,10 +1,8 @@
 // Default movie IDs for popular movies
 export const defaultData = {
   movies: [
-    1726
   ],
   series: [
-    85271
   ]
 };
 
