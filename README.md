@@ -61,16 +61,6 @@ README.md            # Project documentation
    npm run dev
    ```
 
-3. **Build for production:**
-   ```sh
-   npm run build
-   ```
-
-4. **Preview production build:**
-   ```sh
-   npm run preview
-   ```
-
 ## Usage
 
 - **Add Media:** Go to "Add Media" to add movies or series.
