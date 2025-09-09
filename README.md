@@ -2,6 +2,9 @@
 
 Flick-Fusion is a modern web application for managing and streaming your personal movie and TV series collection. This platform allows users to organize, add, and watch their favorite media content in one centralized location.
 
+## Live Link
+https://flick-fusion-x.vercel.app/
+
 ## Features
 
 - **Media Management:** Add, organize, and remove your movies and TV series.
