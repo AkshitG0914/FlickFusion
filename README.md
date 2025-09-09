@@ -136,7 +136,8 @@ Contributions are welcome! Feel free to fork the repo, open issues, or submit pu
 
 ## License
 
-This project is for personal use and learning. See [LICENSE](LICENSE) for details.
+This project is for educational and personal use.
+Not for commercial redistribution.
 
 ---
 
