@@ -153,4 +153,4 @@ Not for commercial redistribution.
 
 ## Author
 
-Developed by Akshit Anoai.
+Developed by Akshit, Aman Sharma and Aryan Tiwari.
