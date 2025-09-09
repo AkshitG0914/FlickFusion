@@ -1,156 +1,84 @@
-# Flick Fusion
+# Flick-Fusion
 
-Flick Fusion is a modern React-based web application for managing and watching your favorite TV series and movies. It provides a beautiful, responsive interface for organizing your personal media collection, searching for new content, and streaming episodes or movies directly from the browser.
-
----
+Flick-Fusion is a modern web application for managing and streaming your personal movie and TV series collection. This platform allows users to organize, add, and watch their favorite media content in one centralized location.
 
 ## Features
 
-- **Personal Media Collections:**  
-  Maintain separate collections for TV series and movies. Add new items via search, reorder, or remove them as you wish.
-
-- **Search & Add:**  
-  Search for any series or movie using TMDB's API proxy and add them to your collection with a single click.
-
-- **Filter & Sort:**  
-  Powerful filter and sort options by genre, last watched, alphabetical order, rating, and (for movies) release date.
-
-- **Watch Directly:**  
-  Stream episodes or movies using embedded players. For series, select season and episode; for movies, watch in HD.
-
-- **Genre Browsing:**  
-  Click on any genre to view all items in your collection that match, and quickly jump to their watch pages.
-
-- **Responsive Design:**  
-  Fully optimized for desktop, tablet, and mobile screens.
-
-- **Persistent Storage:**  
-  All collections and watch history are stored in your browser's localStorage, so your data is preserved across sessions.
-
----
+- **Media Management:** Add, organize, and remove your movies and TV series.
+- **Dedicated Sections:** Separate spaces for movies and TV series.
+- **Streaming Capability:** Watch your media content directly through the platform.
+- **Responsive Design:** Modern and user-friendly interface that works on various devices.
+- **Easy Navigation:** Intuitive navbar for seamless movement between different sections.
+- **Theme Toggle:** Switch between dark and light modes.
+- **Sorting & Filtering:** Sort by release date, genre, and more.
+- **Like/Favorite:** Mark your favorite movies and series.
 
 ## Tech Stack
 
-- **Frontend:**  
-  - React 18  
-  - React Router DOM  
-  - Vite (for fast development and build)  
-  - CSS Modules for styling
-
-- **APIs:**  
-  - TMDB Proxy API (via Cloudflare Worker) for fetching movie/series/episode data
-
-- **Other:**  
-  - LocalStorage for persistent user data  
-  - ESLint for code quality
-
-- **Planned Backend:**  
-  - **Node.js** and **MongoDB** will be integrated in future versions to provide a full backend and persistent storage beyond the browser.
-
----
+- React 18
+- Vite
+- React Router DOM
+- React Icons
+- Custom CSS (with CSS variables for theming)
+- ESLint
 
 ## Folder Structure
 
 ```
-Basic_Flick_Fusion/
-├── src/
-│   ├── component/         # Reusable React components (e.g., AddMedia)
-│   ├── data/              # Seed data for initial collections
-│   ├── pages/             # Main pages (Home, Watch Series, Watch Movie)
-│   ├── styles/            # CSS files for each page/component
-│   ├── utils/             # Utility functions (TMDB API helpers)
-│   ├── App.jsx            # Main App component with routes
-│   ├── main.jsx           # Entry point
-│   └── index.css          # Global styles
-├── public/                # Static assets (favicon, etc.)
-├── index.html             # Main HTML file
-├── package.json           # Project dependencies and scripts
-├── vite.config.js         # Vite configuration
-├── eslint.config.js       # ESLint configuration
-└── README.md              # Project documentation
+src/
+  App.jsx            # Main app component, routing, theme
+  App.css            # App-wide styles
+  index.css          # Global styles, variables, utilities
+  pages/
+    LandingPage.jsx  # Home/landing page
+    MyMovies.jsx     # Movies collection
+    MySeries.jsx     # Series collection
+    WatchMovie.jsx   # Watch movie details/player
+    WatchSeries.jsx  # Watch series details/player
+    AddMedia.jsx     # Add new media form
+    NotFound.jsx     # 404 page
+  components/
+    Navbar.jsx       # Navigation bar
+  utils/
+    movieOrganization.js # Sorting/grouping helpers
+index.html           # HTML template
+package.json         # Project metadata and scripts
+README.md            # Project documentation
 ```
 
----
+## Getting Started
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+
+3. **Build for production:**
+   ```sh
+   npm run build
+   ```
+
+4. **Preview production build:**
+   ```sh
+   npm run preview
+   ```
 
 ## Usage
 
-### 1. Install Dependencies
-
-```bash
-npm install
-```
-
-### 2. Start Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### 3. Build for Production
-
-```bash
-npm run build
-```
-
-### 4. Preview Production Build
-
-```bash
-npm run preview
-```
-
----
-
-## How It Works
-
-- **Home Page:**  
-  - Choose between "My Series Collection" and "My Movie Collection".
-  - Search for new items and add them to your collection.
-  - Filter and sort your collection.
-  - Reorder or delete items.
-
-- **Watch Series Page:**  
-  - Select a season and episode to watch.
-  - See series details and genres.
-  - Browse other series by genre.
-
-- **Watch Movie Page:**  
-  - Watch the selected movie in HD.
-  - See movie details and genres.
-  - Browse other movies by genre.
-
-- **Add Media Modal:**  
-  - Search TMDB for any series or movie.
-  - Preview results and add directly to your collection.
-
----
-
-## Customization
-
-- **Seed Data:**  
-  The app loads with a set of popular movies and series (see `src/data/seedData.json`). You can modify this file to change the initial collection.
-
-- **Styling:**  
-  All styles are in the `src/styles/` folder and can be customized as needed.
-
----
-
-## Credits
-
-- **TMDB API** for movie and series data.
-- **vidsrc.xyz** for streaming embeds.
-- **UIverse.io** for some UI inspiration.
-
----
+- **Add Media:** Go to "Add Media" to add movies or series.
+- **Browse:** Use "My Movies" and "My Series" to view and manage your collection.
+- **Watch:** Click on any item to view details and watch.
+- **Theme:** Toggle dark/light mode from the navbar.
 
 ## License
 
-This project is for educational and personal use.  
-Not for commercial redistribution.
+This project is for personal use and learning. See [LICENSE](LICENSE) for details.
 
 ---
 
-## Author
-
-Developed by Akshit, Aman Sharma and Aryan Tiwari.
+Enjoy managing and streaming your media with Flick-Fusion!
